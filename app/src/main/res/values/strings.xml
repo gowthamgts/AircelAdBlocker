@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aircel Ad Blocker</string>
+    <string name="title">AircelAdBlocker!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_call_jerk">AircelAdBlock</string>
+    <string name="title_activity_call_jerks">Block Ad</string>
+    <string name="title_activity_phone_number_fetch">Enter Phone Number</string>
+    <string name="preference_file_key">com.gts.airceladblocker.prefs</string>
+    <string name="main_body_text">Block the ads of the first call of the day.\
+        This app will make a call to your own number at midnight without any cost.\
+        \n\nThis app is an open source and you can find more info at Help.</string>
+    <string-array name="sim_card_dropdown">
+        <item>Select SIM slot</item>
+        <item>SIM 1</item>
+        <item>SIM 2</item>
+    </string-array>
+    <string name="phone_number_instruction">Please enter the following details to get started.</string>
+</resources>
