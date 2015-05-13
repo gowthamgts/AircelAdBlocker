@@ -57,6 +57,9 @@ public class BCastReceiver extends BroadcastReceiver {
             context.getContentResolver().delete(CallLog.Calls.CONTENT_URI,
                     queryString, null);
             Log.i("Debug", "Deleted the log");
+            //TODO Locking code here. Test for conformance
+            keyguardLock.reenableKeyguard();
+            wakeLock.release();
         } else if (action.equals("android.intent.action.BOOT_COMPLETED")) {
             // This intent is to call
             Intent alrmIntent = new Intent(context, BCastReceiver.class);
