@@ -6,13 +6,13 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.provider.CallLog;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class CallJerks extends ActionBarActivity {
+public class CallJerks extends AppCompatActivity {
     private CountDownTimer timer;
     private int simSelection;
     private String phoneNumber;

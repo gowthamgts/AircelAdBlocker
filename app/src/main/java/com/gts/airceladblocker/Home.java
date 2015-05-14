@@ -7,7 +7,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.PowerManager;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
@@ -17,7 +17,7 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Home extends ActionBarActivity {
+public class Home extends AppCompatActivity {
     private static PowerManager.WakeLock wakeLock;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,7 +105,6 @@ public class Home extends ActionBarActivity {
                     editor.commit();
                     tvStatus.setText("Done for the day!");
                     tvStatus.setTextColor(Color.argb(255, 77, 190, 30));
-
                 } else if (resultCode == RESULT_CANCELED) {
                     editor.putBoolean("isCallMade", false);
                     editor.commit();
@@ -127,7 +126,6 @@ public class Home extends ActionBarActivity {
         return true;
     }
 
-    //TODO Add Menus to the app
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -136,7 +134,8 @@ public class Home extends ActionBarActivity {
         int id = item.getItemId();
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Log.i("Debug", "Settings is clicked...");
+            Intent intent = new Intent(this, FragmenterActivity.class);
+            startActivity(intent);
             return true;
         } else if (id == R.id.action_show_help) {
             showPopup();
@@ -154,6 +153,7 @@ public class Home extends ActionBarActivity {
         builder.setCustomTitle(title);
         WebView wv = new WebView(this);
         wv.loadData(getString(R.string.webview_about), "text/html", null);
+        wv.setBackgroundColor(Color.rgb(30, 30, 30));
         builder.setView(wv);
         builder.setNeutralButton(R.string.close, new DialogInterface.OnClickListener() {
             @Override

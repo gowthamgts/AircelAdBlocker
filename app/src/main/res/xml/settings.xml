@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="pref_enabled"
+        android:title="Blocker Enabled?"
+        android:summary="Uncheck to turn off the automatic caller"
+        android:defaultValue="true"
+        />
+    <EditTextPreference
+        android:dependency="pref_enabled"
+        android:key="userphonenumber"
+        android:title="Aircel Phone Number"
+        android:summary="Enter your Aircel phone number which needs to be called to and from daily"
+        android:dialogTitle="Aircel Number"
+        />
+</PreferenceScreen>
