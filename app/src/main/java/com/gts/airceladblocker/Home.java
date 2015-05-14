@@ -1,5 +1,7 @@
 package com.gts.airceladblocker;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -7,9 +9,11 @@ import android.os.Bundle;
 import android.os.PowerManager;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -60,7 +64,6 @@ public class Home extends ActionBarActivity {
      * the user from a new intent and also sets the alarm for the first time.
      */
     private void checkRequisites() {
-//        Toast.makeText(this, "Checking for prerequisites", Toast.LENGTH_SHORT).show();
         SharedPreferences sharedPreferences = getApplicationContext()
                 .getSharedPreferences(getString(R.string.preference_file_key),
                         MODE_PRIVATE);
@@ -133,8 +136,32 @@ public class Home extends ActionBarActivity {
         int id = item.getItemId();
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Log.i("Debug", "Settings is clicked...");
+            return true;
+        } else if (id == R.id.action_show_help) {
+            showPopup();
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void showPopup() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        TextView title = new TextView(this);
+        title.setText("About AircelAdBlocker");
+        title.setGravity(Gravity.CENTER);
+        title.setPadding(0, 15, 0, 15);
+        builder.setCustomTitle(title);
+        WebView wv = new WebView(this);
+        wv.loadData(getString(R.string.webview_about), "text/html", null);
+        builder.setView(wv);
+        builder.setNeutralButton(R.string.close, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
