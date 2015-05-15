@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
@@ -32,8 +33,9 @@ public class Home extends AppCompatActivity {
                 startActivityForResult(new Intent(Home.this, CallJerks.class), 2);
             }
         });
-        SharedPreferences sp = getApplicationContext()
-                .getSharedPreferences(getString(R.string.preference_file_key), MODE_PRIVATE);
+//        SharedPreferences sp = getApplicationContext()
+//                .getSharedPreferences(getString(R.string.preference_file_key), MODE_PRIVATE);
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
         boolean status = sp.getBoolean("isCallMade", false);
         if (!status) {
             TextView tv = (TextView) findViewById(R.id.tvStatus);
@@ -64,12 +66,10 @@ public class Home extends AppCompatActivity {
      * the user from a new intent and also sets the alarm for the first time.
      */
     private void checkRequisites() {
-        SharedPreferences sharedPreferences = getApplicationContext()
-                .getSharedPreferences(getString(R.string.preference_file_key),
-                        MODE_PRIVATE);
-        long phoneNumber = sharedPreferences.getLong("userphonenumber", 0L);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String phoneNumber = sharedPreferences.getString("userphonenumber", null);
         Log.i("LOGGING", "phoneNumber = " + phoneNumber);
-        if(phoneNumber == 0L) {
+        if(phoneNumber == null) {
             // Start a new activity
             Log.i("Debug", "usernumber is null");
             Intent intent = new Intent(this, PhoneNumberFetch.class);

@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.preference.PreferenceManager;
 import android.provider.CallLog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -85,11 +86,8 @@ public class CallJerks extends AppCompatActivity {
     }
 
     private void readDetails() {
-        SharedPreferences sharedPreferences = this
-                .getSharedPreferences(getString(R.string.preference_file_key),
-                        MODE_PRIVATE);
-        long ph = sharedPreferences.getLong("userphonenumber", 0);
-        phoneNumber = (ph==0) ? null : String.valueOf(ph);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        phoneNumber  = sharedPreferences.getString("userphonenumber", null);
         simSelection = sharedPreferences.getInt("simslot", -1);
     }
 

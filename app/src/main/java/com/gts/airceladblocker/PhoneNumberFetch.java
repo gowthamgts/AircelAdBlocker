@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -31,9 +32,7 @@ public class PhoneNumberFetch extends Activity {
         setContentView(R.layout.activity_phone_number_fetch);
 
         simSelected = false;
-        sharedPreferences = this.getSharedPreferences(getString(R.string.preference_file_key),
-                PhoneNumberFetch.this.MODE_PRIVATE);
-
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         btnDone = (Button) findViewById(R.id.btnDone);
         etPhone = ((EditText)findViewById(R.id.etPhoneNumber));
         context = getApplicationContext();
@@ -62,10 +61,7 @@ public class PhoneNumberFetch extends Activity {
                 }
             }
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-//                Toast.makeText(PhoneNumberFetch.this, "Please select the Aircel Sim slot",
-//                        Toast.LENGTH_LONG).show();
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
 
         btnDone.setOnClickListener(new View.OnClickListener() {
@@ -73,9 +69,9 @@ public class PhoneNumberFetch extends Activity {
             public void onClick(View v) {
                 int len = etPhone.getText().length();
                 if( len == 10 && simSelected) {
-                    long phoneNumber = Long.valueOf(etPhone.getText().toString());
+                    String phoneNumber = etPhone.getText().toString();
                     SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putLong("userphonenumber", phoneNumber);
+                    editor.putString("userphonenumber", phoneNumber);
                     editor.commit();
                     Intent alrmIntent = new Intent(context, BCastReceiver.class);
                     alrmIntent.setAction("com.gts.airceladblocker.ACTION_BCAST");
