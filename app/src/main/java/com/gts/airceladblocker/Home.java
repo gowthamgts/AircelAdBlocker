@@ -29,12 +29,9 @@ public class Home extends AppCompatActivity {
         btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //calling some random jerk around.
                 startActivityForResult(new Intent(Home.this, CallJerks.class), 2);
             }
         });
-//        SharedPreferences sp = getApplicationContext()
-//                .getSharedPreferences(getString(R.string.preference_file_key), MODE_PRIVATE);
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
         boolean status = sp.getBoolean("isCallMade", false);
         if (!status) {
@@ -144,6 +141,10 @@ public class Home extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * This method shows the about section when the About option in the
+     * menu is clicked
+     */
     public void showPopup() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         TextView title = new TextView(this);

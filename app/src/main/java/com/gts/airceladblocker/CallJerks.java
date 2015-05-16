@@ -73,7 +73,6 @@ public class CallJerks extends AppCompatActivity {
                     String queryString = "NUMBER=" + phoneNumber;
                     getApplicationContext().getContentResolver().delete(CallLog.Calls.CONTENT_URI,
                             queryString, null);
-                    Log.i("Debug", "reached at the end");
                     navigateHome(true);
                 } else {
                     //get phone number
@@ -85,10 +84,13 @@ public class CallJerks extends AppCompatActivity {
         }.start();
     }
 
+    /**
+     * This method fills all the pre-requisited data to make a call
+     */
     private void readDetails() {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         phoneNumber  = sharedPreferences.getString("userphonenumber", null);
-        simSelection = sharedPreferences.getInt("simslot", -1);
+        simSelection = Integer.parseInt(sharedPreferences.getString("simslot", null));
     }
 
     @Override

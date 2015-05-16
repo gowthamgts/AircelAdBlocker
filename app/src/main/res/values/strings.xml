@@ -10,12 +10,23 @@
     <string name="main_body_text">Block the ads of the first call of the day.\
         This app will make a call to your own number at midnight without any cost.\
         \n\nThis app is an open source and you can find more info at About.</string>
-    <string-array name="sim_card_dropdown">
+    <string-array name="pref_sim_slot_entries_added">
         <item>Select SIM slot</item>
         <item>SIM 1</item>
         <item>SIM 2</item>
     </string-array>
+    <string-array name="pref_sim_slot_entries">
+        <item>SIM 1</item>
+        <item>SIM 2</item>
+    </string-array>
+    <string-array name="pref_sim_slot_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
     <string name="phone_number_instruction">Please enter the following details to get started.</string>
     <string name="webview_about"><![CDATA[<div style="text-align:justify;color:white">This app is open-sourced under GPL-2 and you can contribute it at <a href="https://github.com/gowthamgts/AircelAdBlocker" style="color:#00A5FF">Github</a>.<br/><br/>Due to no-advert policy, the app is not available in Play Store due to one time developer fee of $25.<br/><br/>This app is developed by <a href="http://gowthamgts.github.io" style="color:#00A5FF">Gowtham Gopalakrishnan</a>.</div>]]></string>
     <string name="close">Close</string>
+
+    <!-- Preference string starts here -->
+    <string name="titlte_enter_number">Your Aircel Number</string>
 </resources>

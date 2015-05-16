@@ -6,13 +6,26 @@
         android:summary="Uncheck to turn off the automatic caller"
         android:defaultValue="true"
         />
-    <EditTextPreference
-        android:dependency="pref_enabled"
-        android:inputType="number"
-        android:key="userphonenumber"
-        android:title="Aircel Phone Number"
-        android:summary="Enter your Aircel phone number which needs to be called to and from daily"
-        android:dialogTitle="Aircel Number"
-        android:selectAllOnFocus="true"
-        />
+    <PreferenceCategory
+        android:title="Simcard Details"
+        >
+        <EditTextPreference
+            android:inputType="number"
+            android:dependency="pref_enabled"
+            android:key="userphonenumber"
+            android:title="Aircel Phone Number"
+            android:summary="Enter your Aircel phone number which needs to be called to and from daily"
+            android:dialogTitle="@string/titlte_enter_number"
+            android:selectAllOnFocus="true"
+            android:numeric="integer"
+            />
+        <ListPreference
+            android:key="simslot"
+            android:dependency="pref_enabled"
+            android:entries="@array/pref_sim_slot_entries"
+            android:entryValues="@array/pref_sim_slot_values"
+            android:summary="Your Aircel sim slot"
+            android:title="Aircel Sim Slot"
+            />
+    </PreferenceCategory>
 </PreferenceScreen>
