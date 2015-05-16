@@ -75,6 +75,8 @@
         android:layout_height="wrap_content"
         android:text="Save"
         android:id="@+id/btnDone"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
         android:textColor="#ffff"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"

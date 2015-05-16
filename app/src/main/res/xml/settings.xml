@@ -6,9 +6,7 @@
         android:summary="Uncheck to turn off the automatic caller"
         android:defaultValue="true"
         />
-    <PreferenceCategory
-        android:title="Simcard Details"
-        >
+    <PreferenceCategory android:title="Simcard Details">
         <EditTextPreference
             android:inputType="number"
             android:dependency="pref_enabled"
@@ -24,7 +22,7 @@
             android:dependency="pref_enabled"
             android:entries="@array/pref_sim_slot_entries"
             android:entryValues="@array/pref_sim_slot_values"
-            android:summary="Your Aircel sim slot"
+            android:summary="Select your Aircel sim slot"
             android:title="Aircel Sim Slot"
             />
     </PreferenceCategory>
