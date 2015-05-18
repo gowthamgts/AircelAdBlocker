@@ -15,5 +15,5 @@ Contributing
 3. Write a neat commit message after your work and refernce it with an issue.
 4. Issue a Pull request.
 
-And you're done. Remember
+And make sure that the Travis build succeed and you're done. Remember
 > **There is nothing a code can't do**
