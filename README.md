@@ -1,4 +1,4 @@
-About AircelAdBlocker
+AircelAdBlocker [![Build Status](https://travis-ci.org/gowthamgts/AircelAdBlocker.svg?branch=master)](https://travis-ci.org/gowthamgts/AircelAdBlocker)
 ---------------------
 AircelAdBlocker is a long term necessity due to those irritating in-call ads from Aircel. I almost hated it and I wanted to do something about it. Also, I had a good time of a month to implement the project and I started it. This is my first Android app and hence I also decided it to release it under **GNU GPL license**. Enough with the history let's get down to business.
 
