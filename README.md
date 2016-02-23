@@ -1,6 +1,6 @@
 AircelAdBlocker [![Build Status](https://travis-ci.org/gowthamgts/AircelAdBlocker.svg?branch=master)](https://travis-ci.org/gowthamgts/AircelAdBlocker)
 ---------------------
-AircelAdBlocker is a long term necessity due to those irritating first in-call ad from Aircel. Everybody hates it and so here's the solution. This app released under **GNU GPL license**. Enough with the history let's get down to business.
+AircelAdBlocker is a long term necessity due to those irritating first in-call ad from Aircel. Everybody hates it and so here's the solution.
 
 Abstract
 --------
@@ -8,7 +8,7 @@ If your carrier is Aircel and outside Chennai in TN (not sure about other states
 
 License
 -------
-You are free and invited to contribute to this application in terms of feature enhancement, bug reporting, designing and performance improvements.
+This app released under **GNU GPL license**. You are free and invited to contribute to this application in terms of feature enhancement, bug reporting, designing and performance improvements.
 
 Contributing
 ------------
