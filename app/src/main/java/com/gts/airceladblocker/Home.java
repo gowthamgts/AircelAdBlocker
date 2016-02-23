@@ -156,6 +156,7 @@ public class Home extends AppCompatActivity {
         wv.loadData(getString(R.string.webview_about), "text/html", null);
         wv.setBackgroundColor(Color.rgb(30, 30, 30));
         builder.setView(wv);
+        // TODO remove this and add a custom button since it is pulled to the left.
         builder.setNeutralButton(R.string.close, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

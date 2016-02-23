@@ -24,7 +24,7 @@
         <item>1</item>
     </string-array>
     <string name="phone_number_instruction">Please enter the following details to get started.</string>
-    <string name="webview_about"><![CDATA[<div style="text-align:justify;color:white">Howdy, thanks for using Aircel AdBlocker. This app is open-sourced under GPL license and you can contribute it at <a href="https://github.com/gowthamgts/AircelAdBlocker" style="color:#00A5FF">Github</a>.<br/><br/>Due to no-advert policy, the app is not available in Play Store due to one time developer fee of $25.<br/><br/>The app is brought to you by <a href="http://gowthamgts.github.io" style="color:#00A5FF">Gowtham Gopalakrishnan</a>.</div>]]></string>
+    <string name="webview_about"><![CDATA[<div style="text-align:justify;color:white">Howdy, thanks for using Aircel AdBlocker. This app is open-sourced under GPL license and you can contribute it at <a href="https://github.com/gowthamgts/AircelAdBlocker" style="color:#00A5FF">Github</a>.<br/><br/>The app is brought to you by <a href="http://gowthamgts.github.io" style="color:#00A5FF">Gowtham Gopalakrishnan</a>.</div>]]></string>
     <string name="close">Close</string>
 
     <!-- Preference string starts here -->
