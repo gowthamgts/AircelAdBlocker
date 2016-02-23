@@ -1,6 +1,10 @@
 AircelAdBlocker [![Build Status](https://travis-ci.org/gowthamgts/AircelAdBlocker.svg?branch=master)](https://travis-ci.org/gowthamgts/AircelAdBlocker)
 ---------------------
-AircelAdBlocker is a long term necessity due to those irritating in-call ads from Aircel. I almost hated it and I wanted to do something about it. Also, I had a good time of a month to implement the project and I started it. This is my first Android app and hence I also decided it to release it under **GNU GPL license**. Enough with the history let's get down to business.
+AircelAdBlocker is a long term necessity due to those irritating first in-call ad from Aircel. Everybody hates it and so here's the solution. This app released under **GNU GPL license**. Enough with the history let's get down to business.
+
+Abstract
+--------
+If your carrier is Aircel and outside Chennai in TN (not sure about other states), on your first call of the day you'll hear some advertisements played before the ring. Quite annoying if you're calling someone in a hurry. So, here's the plan this app will automatically make a call when you're asleep in the night hence accounting for the first call. When you're actually making your first call of the day, technically it will be your second call and hence no ads will be played again. Nice huh!
 
 License
 -------
