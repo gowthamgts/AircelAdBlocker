@@ -17,6 +17,9 @@ before_script:
   - echo yes | android update sdk --no-ui --all --filter platform-tools,tools
   - echo yes | android update sdk --no-ui --all --filter build-tools-23.0.2
   - echo yes | android update sdk --no-ui --all --filter android-23
-
+  
+before_install:
+    - chmod +x gradlew
+    
 script:
     - ./gradlew clean build
