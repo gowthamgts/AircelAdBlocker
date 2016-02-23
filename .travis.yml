@@ -2,9 +2,9 @@ language: android
 android:
    components:
    - platform-tools
-   - android-21
-   - build-tools-21.1.2
-   - extra
+   - android-23
+   - build-tools-23.0.1
+   - extra-android-m2repository
 
 jdk: oraclejdk7
 
@@ -17,4 +17,4 @@ before_install:
    - chmod +x gradlew
 
 script:
-   - ./gradlew clean build
+   - ./gradlew build connectedCheck
