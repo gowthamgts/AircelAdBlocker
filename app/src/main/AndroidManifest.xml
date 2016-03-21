@@ -27,11 +27,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CallJerks"
+            android:name=".CallHandler"
             android:label="@string/title_activity_call_jerks"
             android:parentActivityName=".Home" >
             <intent-filter>
-                <action android:name="CallJerksActivity" />
+                <action android:name="CallHandlerActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data

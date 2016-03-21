@@ -14,7 +14,6 @@ import java.util.Calendar;
  * @author Gowtham Gopalakrishnan
  */
 public class AlarmHandler {
-
     /**
      * This method is used to register the alarm for the application.
      * @param context The context of the alarm to be registered.

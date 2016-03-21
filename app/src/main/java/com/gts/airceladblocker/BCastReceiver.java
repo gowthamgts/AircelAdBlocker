@@ -64,5 +64,5 @@ public class BCastReceiver extends BroadcastReceiver {
 }
 //            Intent homeIn=new Intent(context, Home.class);
 //            homeIn.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//            homeIn.setAction("com.gts.airceladblocker.ACTION_CALLJERKS");
+//            homeIn.setAction("com.gts.airceladblocker.ACTION_CALLHANDLER");
 //            context.startActivity(homeIn);

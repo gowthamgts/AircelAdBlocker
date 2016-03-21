@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class CallJerks extends AppCompatActivity {
+public class CallHandler extends AppCompatActivity {
     private CountDownTimer timer;
     private int simSelection;
     private String phoneNumber;
@@ -45,7 +45,7 @@ public class CallJerks extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         readDetails();
-        setContentView(R.layout.activity_call_jerks);
+        setContentView(R.layout.activity_call_handler);
         final TextView tv = (TextView) findViewById(R.id.tvSecs);
         Button btnCancel = (Button) findViewById(R.id.btnCancel);
         btnCancel.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +76,7 @@ public class CallJerks extends AppCompatActivity {
                     navigateHome(true);
                 } else {
                     //get phone number
-                    Intent intent = new Intent(CallJerks.this, PhoneNumberFetch.class);
+                    Intent intent = new Intent(CallHandler.this, PhoneNumberFetch.class);
                     Log.i("Debug", "Starting phone number fetch from Calljerks");
                     startActivityForResult(intent, 1);
                 }

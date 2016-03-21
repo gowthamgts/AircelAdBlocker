@@ -27,6 +27,9 @@
     <string name="webview_about"><![CDATA[<div style="text-align:justify;color:white">Howdy, thanks for using Aircel AdBlocker. This app is open-sourced under GPL license and you can contribute it at <a href="https://github.com/gowthamgts/AircelAdBlocker" style="color:#00A5FF">Github</a>.<br/><br/>The app is brought to you by <a href="http://gowthamgts.github.io" style="color:#00A5FF">Gowtham Gopalakrishnan</a>.</div>]]></string>
     <string name="close">Close</string>
 
+    <!-- About Dialog Strings -->
+    <string name="about_dialog_title">About Aircel Ad Blocker</string>
+
     <!-- Preference string starts here -->
     <string name="titlte_enter_number">Your Aircel Number</string>
 </resources>

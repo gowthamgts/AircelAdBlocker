@@ -29,7 +29,7 @@ public class Home extends AppCompatActivity {
         btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivityForResult(new Intent(Home.this, CallJerks.class), 2);
+                startActivityForResult(new Intent(Home.this, CallHandler.class), 2);
             }
         });
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
@@ -148,7 +148,7 @@ public class Home extends AppCompatActivity {
     public void showPopup() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         TextView title = new TextView(this);
-        title.setText("About AircelAdBlocker");
+        title.setText(getString(R.string.about_dialog_title));
         title.setGravity(Gravity.CENTER);
         title.setPadding(0, 15, 0, 15);
         builder.setCustomTitle(title);
