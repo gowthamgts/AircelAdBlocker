@@ -36,7 +36,7 @@ public class Home extends AppCompatActivity {
         boolean status = sp.getBoolean("isCallMade", false);
         if (!status) {
             TextView tv = (TextView) findViewById(R.id.tvStatus);
-            tv.setText("Not Blocked Today");
+            tv.setText(R.string.status_failed);
             tv.setTextColor(Color.argb(255, 190, 65, 65));
         }
     }
@@ -49,11 +49,11 @@ public class Home extends AppCompatActivity {
         boolean status = sp.getBoolean("isCallMade", false);
         if (!status) {
             TextView tv = (TextView) findViewById(R.id.tvStatus);
-            tv.setText("Not Blocked Today");
+            tv.setText(R.string.status_failed);
             tv.setTextColor(Color.argb(255, 190, 65, 65));
         } else {
             TextView tv = (TextView) findViewById(R.id.tvStatus);
-            tv.setText("Done for the day!");
+            tv.setText(R.string.status_success);
             tv.setTextColor(Color.argb(255, 77, 190, 30));
         }
     }
@@ -156,8 +156,7 @@ public class Home extends AppCompatActivity {
         wv.loadData(getString(R.string.webview_about), "text/html", null);
         wv.setBackgroundColor(Color.rgb(30, 30, 30));
         builder.setView(wv);
-        // TODO remove this and add a custom button since it is pulled to the left.
-        builder.setNeutralButton(R.string.close, new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(R.string.close, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();

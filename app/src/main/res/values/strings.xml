@@ -29,7 +29,11 @@
 
     <!-- About Dialog Strings -->
     <string name="about_dialog_title">About Aircel Ad Blocker</string>
-
+    <string name="about_dialog_buttontext">Close</string>
     <!-- Preference string starts here -->
     <string name="titlte_enter_number">Your Aircel Number</string>
+
+    <!-- Status strings -->
+    <string name="status_failed">Not Blocked Today. May be you\'ve turned off Aircel Ad Blocker. Please check your settings.</string>
+    <string name="status_success">Done for the day!</string>
 </resources>
